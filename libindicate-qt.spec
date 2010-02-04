@@ -8,7 +8,7 @@ Summary:	Qt bindings for libindicate
 Summary(pl.UTF-8):	Dowiązania Qt dla biblioteki indicate
 Name:		libindicate-qt
 Version:	0.2.2
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://launchpad.net/libindicate-qt/trunk/0.2.2/+download/%{name}-%{version}.tar.bz2
