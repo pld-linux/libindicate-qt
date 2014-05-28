@@ -1,0 +1,11 @@
+--- libindicate-qt-0.2.5.91/CMakeLists.txt~	2011-02-03 17:35:18.000000000 +0100
++++ libindicate-qt-0.2.5.91/CMakeLists.txt	2014-05-28 09:18:36.606020259 +0200
+@@ -17,7 +17,7 @@
+ 
+ add_definitions(-Wall)
+ 
+-pkg_check_modules(INDICATE REQUIRED indicate-0.5)
++pkg_check_modules(INDICATE REQUIRED indicate-0.7)
+ 
+ include_directories(
+     ${QT_INCLUDE_DIR}
