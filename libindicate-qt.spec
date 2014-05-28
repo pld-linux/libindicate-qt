@@ -7,19 +7,20 @@
 Summary:	Qt bindings for libindicate
 Summary(pl.UTF-8):	Dowiązania Qt dla biblioteki indicate
 Name:		libindicate-qt
-Version:	0.2.2
-Release:	2
+Version:	0.2.5.91
+Release:	1
 License:	LGPL v2+
 Group:		X11/Libraries
-Source0:	http://launchpad.net/libindicate-qt/trunk/0.2.2/+download/%{name}-%{version}.tar.bz2
-# Source0-md5:	edc09ce095e7aab01b85291ce9e5f78c
-URL:		http://https://launchpad.net/libindicate-qt/
+Source0:	http://launchpad.net/libindicate-qt/libindicate-0.5/0.2.5.91/+download/%{name}-%{version}.tar.bz2
+# Source0-md5:	67e474d55c8ab0d7d2fd3f9da651eba3
+Patch0:		%{name}-build.patch
+URL:		https://launchpad.net/libindicate-qt/
 BuildRequires:	QtCore-devel >= %{qt_ver}
 BuildRequires:	QtGui-devel >= %{qt_ver}
 BuildRequires:	QtTest-devel >= %{qt_ver}
 BuildRequires:	automoc4 >= 0.9.84
 BuildRequires:	cmake >= 2.6.1-2
-BuildRequires:	libindicate-devel >= 0.2.3
+BuildRequires:	libindicate-devel >= 12.0.0
 BuildRequires:	qt4-build >= %{qt_ver}
 BuildRequires:	qt4-qmake >= %{qt_ver}
 BuildRequires:	rpmbuild(macros) >= 1.293
@@ -46,6 +47,7 @@ Pliki nagłówkowe biblioteki indicate-qt.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 install -d build
@@ -74,7 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %ghost %{_libdir}/libindicate-qt.so.1
-%attr(755,root,root) %{_libdir}/libindicate-qt.so.1.1.0
+%attr(755,root,root) %{_libdir}/libindicate-qt.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
